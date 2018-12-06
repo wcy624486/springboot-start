@@ -12,8 +12,8 @@
             <property name="mappers" value="com.yonyou.utils.MyMapper"/>
         </plugin>
 
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://localhost:3306/leecx"
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/library"
                         userId="root"
                         password="root">
         </jdbcConnection>
