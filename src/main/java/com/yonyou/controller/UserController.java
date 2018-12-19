@@ -38,6 +38,7 @@ public class UserController {
 		u.setPassword("123");
 		u.setBirthday(new Date());
 		u.setDesc(null);
+		//testGit
 		return YonyouJSONResult.ok(u);
 	}
 
