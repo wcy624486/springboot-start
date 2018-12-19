@@ -14,6 +14,7 @@ import com.yonyou.pojo.YonyouJSONResult;
 //@Controller
 @RestController			//@RestController  =  @Controller  +   @ResponseBody
 @RequestMapping("/user")
+
 public class UserController {
 	
 	@RequestMapping("/getUser")
@@ -31,6 +32,7 @@ public class UserController {
 	//@ResponseBody
 	public YonyouJSONResult getUserJSON(){
 		User u = new User();
+		
 		u.setName("messi");
 		u.setAge(18);
 		u.setPassword("123");

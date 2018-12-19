@@ -79,7 +79,7 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.41</version>
+			<version>8.0.13</version>
 		</dependency>
 
 		<!--mybatis-->
@@ -104,7 +104,7 @@
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid-spring-boot-starter</artifactId>
-			<version>1.1.9</version>
+			<version>1.1.0</version>
 		</dependency>
 
 		<dependency>
@@ -114,6 +114,13 @@
 			<scope>compile</scope>
 			<optional>true</optional>
 		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.16.20</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>

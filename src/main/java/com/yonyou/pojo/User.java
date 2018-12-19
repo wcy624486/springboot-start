@@ -6,8 +6,9 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import lombok.Data;
 
-
+@Data
 public class User {
 	@JsonIgnore//前台显示时忽略此项信息
 	private String name;
@@ -20,7 +21,7 @@ public class User {
 	@JsonInclude(Include.NON_NULL)//为空则不显示
 	private String desc;
 
-	public String getName() {
+	/*public String getName() {
 		return name;
 	}
 
@@ -58,7 +59,7 @@ public class User {
 
 	public void setDesc(String desc) {
 		this.desc = desc;
-	}
+	}*/
 	
 	
 }
