@@ -22,10 +22,6 @@
     <result column="createtime" jdbcType="DATE" property="createtime" />
   </resultMap>
   
-  
-    
-    
-    
     <select id="countLogin" resultType="java.lang.Integer">
     	select count(userid)
     	from sys_user 
@@ -51,7 +47,6 @@
             </if>
         </where>
     </select>
-  
   
   
 </mapper>

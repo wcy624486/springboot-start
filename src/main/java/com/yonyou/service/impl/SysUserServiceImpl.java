@@ -56,7 +56,10 @@ public class SysUserServiceImpl implements SysUserService{
 		
 		return userList;
 	}
-
+	
+	/**
+	 * 登录验证查询
+	 */
 	@Override
 	public String loginYesOrNo(String username,String password) {
 		int num = sysUserMapper.countLogin(username, password);
