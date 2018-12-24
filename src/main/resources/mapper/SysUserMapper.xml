@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yonyou.mapper.SysUserMapper">
+  <resultMap id="BaseResultMap" type="com.yonyou.pojo.SysUser">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="aid" jdbcType="VARCHAR" property="aid" />
+    <result column="userid" jdbcType="VARCHAR" property="userid" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="sex" jdbcType="VARCHAR" property="sex" />
+    <result column="sexcode" jdbcType="INTEGER" property="sexcode" />
+    <result column="usertype" jdbcType="VARCHAR" property="usertype" />
+    <result column="mobilephone" jdbcType="VARCHAR" property="mobilephone" />
+    <result column="mail" jdbcType="VARCHAR" property="mail" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="duedate" jdbcType="DATE" property="duedate" />
+    <result column="lastip" jdbcType="VARCHAR" property="lastip" />
+    <result column="lastlogintime" jdbcType="DATE" property="lastlogintime" />
+    <result column="lastupdate" jdbcType="DATE" property="lastupdate" />
+    <result column="createtime" jdbcType="DATE" property="createtime" />
+  </resultMap>
+  
+  
+    
+    
+    
+    <select id="countLogin" resultType="java.lang.Integer">
+    	select count(userid)
+    	from sys_user 
+    	<where>
+    		<if test="username!=null">
+    			username = #{username}
+    		</if>
+    		<if test="password!=null">
+    			and password = #{password}
+    		</if>
+    	</where>
+    </select>
+    
+    <select id="queryUsers" resultType="com.yonyou.pojo.SysUser">
+        select *
+        from sys_user
+        <where>
+            <if test="username!=null">
+                username = #{username}
+            </if>
+            <if test="password">
+            	and password = #{password}
+            </if>
+        </where>
+    </select>
+  
+  
+  
+</mapper>
